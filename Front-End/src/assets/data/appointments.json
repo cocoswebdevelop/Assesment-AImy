@@ -1,0 +1,80 @@
+[
+    {
+        "id":  1,
+        "title" : "Patrick",
+        "barber" : 1,
+        "catagory": "Mannen knippen",
+        "colourTag" : "red",
+        "description" : "Peter houdt van een heerlijke kop koffie tijdens de behandeling.",
+        "day" : "11/14/2021",
+        "start" : "8:00",
+        "end" : "9:15"
+    },
+    {
+        "id":  2,
+        "title" : "Margiet",
+        "barber" : 1,
+        "catagory": "Vrouwen knippen",
+        "colourTag" : "purple",
+        "description" : "Graag zelfde behandeling als de vorige keer.",
+        "day" : "11/14/2021",
+        "start" : "10:00",
+        "end" : "11:00"
+    },
+    {
+        "id":  3,
+        "title" : "Jenny",
+        "barber" : 2,
+        "catagory": "Vrouwen knippen",
+        "colourTag" : "green",
+        "description" : "Jenny houdt van een heerlijke kop thee tijdens de behandeling",
+        "day" : "11/14/2021",
+        "start" : "9:00",
+        "end" : "10:15"
+    },
+    {
+        "id":  4,
+        "title" : "Patrick",
+        "barber" : 2,
+        "catagory": "Mannen knippen",
+        "colourTag" : "green",
+        "description" : "Peter houdt van een heerlijke kop koffie tijdens de behandeling",
+        "day" : "11/14/2021",
+        "start" : "11:45",
+        "end" : "13:00"
+    },
+    {
+        "id":  5,
+        "title" : "Lianne",
+        "barber" : 3,
+        "catagory": "Vrouwen knippen",
+        "colourTag" : "yellow",
+        "description" : "Lianne houdt van een heerlijke kop koffie tijdens de behandeling",
+        "day" : "11/14/2021",
+        "start" : "10:45",
+        "end" : "12:00"
+    },
+    {        
+        "id":  6,
+        "title" : "Bram",
+        "barber" : 3,
+        "catagory": "Heren knippen",
+        "description" : "",
+        "colourTag" : "orange",
+        "day" : "11/14/2021",
+        "start" : "12:30",
+        "end" : "13:45"
+    },
+    {        
+        "id":  7,
+        "title" : "Kevin",
+        "barber" : 4,
+        "catagory": "Heren knippen",
+        "description" : "knippen en baard trimmen. Is de vriend van Anouk",
+        "colourTag" : "blue",
+        "day" : "11/14/2021",
+        "start" : "9:15",
+        "end" : "10:15"
+    }
+
+]

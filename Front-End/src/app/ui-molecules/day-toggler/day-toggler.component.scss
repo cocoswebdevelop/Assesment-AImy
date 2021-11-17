@@ -1,0 +1,25 @@
+.day-toggler{
+    width:          auto;
+    height:         40px;
+    border:         2px solid var(--light-blue);
+    border-radius:  5px;
+    font-size:      13px;
+    display:        inline-flex;
+}
+
+::ng-deep{
+    button{
+        height:     80%;
+    }
+    .button-m{
+        min-width: 75px;
+        height: 20px;
+        margin-top: 10px;
+        color: var(--black);
+        font-weight: 600;
+        border: none;
+        background-color: transparent;
+        line-height: 18px;
+        text-align: center;
+    }
+}

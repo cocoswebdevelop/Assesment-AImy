@@ -1,0 +1,19 @@
+.filter-toggler{
+    width:          175px;
+    height:         40px;
+    font-style:     normal;
+    font-weight:    500;
+    line-height:    16px;
+    font-family:    'Avenir-Regular';
+    position:       relative;
+    padding-left:   5%;       
+}
+
+
+::ng-deep{
+    .filter-icon-down{
+        margin:         auto;
+        float:          right;
+        right:          0;
+    }
+}

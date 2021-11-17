@@ -1,0 +1,19 @@
+input{
+    width:          272px;
+    height:         40px;
+    font-size:      13px;
+    line-height:    18px;
+    text-indent:    15%;
+    text-align:     left;
+    background-image: url(../../../assets/images/icons/navbar/search.png);
+    background-position: left;
+    background-position-x: 12px;
+    background-repeat: no-repeat;
+}
+
+
+::placeholder{  
+    padding-left:           15%;
+    font-size:              13px;
+    line-height:            18px;
+}

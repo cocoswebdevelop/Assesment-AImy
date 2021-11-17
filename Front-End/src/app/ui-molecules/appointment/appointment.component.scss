@@ -1,0 +1,45 @@
+.single{
+    width:                  194px;
+    color:                  var(--black);
+    display:                inline-flex;
+    z-index:                999;
+
+    .details{
+        width:          85%;
+        height:         auto;
+        display:        block;
+        padding:        5px;
+        text-align:     left;
+        
+        .title{
+            font-size:          14px;
+            font-weight:        600;
+        }
+
+        .catagory,
+        .description,
+        .time-period{
+            margin-top:         7.5px;
+            font-size:          12px;
+            font-weight:        400;
+            line-height:        14px;
+            font-family:        'Avenir-Thin';
+        }
+    }
+
+    .actions{
+        width:          15%;
+        height:         auto;
+        padding-top:    2.5%;
+        display:        block;
+        text-align:     center;
+
+            .action-icon{
+                width:          15px;
+                height:         15px;
+                margin:         auto;
+                text-align:     center;
+                cursor:         pointer;
+            }
+    }
+}

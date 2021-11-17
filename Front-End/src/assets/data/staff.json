@@ -1,0 +1,44 @@
+[
+    {   
+        "id" : 1,
+        "name" : "Barbara",
+        "picture": "./assets/images/persons/person.png",
+        "branch" : "Nassaustraat"
+    },
+    {
+        "id" : 2,
+        "name": "Martina",
+        "picture": "./assets/images/persons/person.png",
+        "branch" : "Nassaustraat"
+    },
+    {
+        "id" : 3,
+        "name": "Maxime",
+        "picture": "./assets/images/persons/person.png",
+        "branch" : "Nassaustraat"
+    },
+    {
+        "id" : 4,
+        "name": "Nick",
+        "picture": "./assets/images/persons/person.png",
+        "branch" : "Nassaustraat"
+    },
+    {
+        "id" : 5,
+        "name": "Karijn",
+        "picture": "./assets/images/persons/person.png",
+        "branch" : "Nassaustraat"
+    },
+    {
+        "id" : 6,
+        "name": "Anna",
+        "picture": "./assets/images/persons/person.png",
+        "branch" : "Nassaustraat"
+    },
+    {
+        "id" : 7,
+        "name": "Lauren",
+        "picture": "./assets/images/persons/person.png",
+        "branch" : "Nassaustraat"
+    }
+]

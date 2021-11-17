@@ -1,0 +1,13 @@
+<div class="notifications">
+    <app-button-l
+        class="border"
+        [buttonValue]="'Instellingen'"></app-button-l>
+    <app-button-s
+        class="border"
+        (click)="openChats()"
+        [imageSrc]="'./assets/images/icons/navbar/chat.png'"></app-button-s>
+    <app-button-s
+        class="border"
+        (click)="openNotifications()"
+        [imageSrc]="'./assets/images/icons/navbar/notification.png'"></app-button-s>
+</div>

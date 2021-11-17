@@ -1,0 +1,16 @@
+button,
+input{
+    font-family:            'Avenir-Regular';
+}
+
+button{
+    cursor:                 pointer;
+}
+
+.border{
+    border:                 solid 2px var(--light-blue);
+    border-radius:          6px;
+}
+.no-border{
+    border:                 none!important;
+}

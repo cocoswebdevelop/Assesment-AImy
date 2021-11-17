@@ -1,0 +1,35 @@
+.branch-toggler{
+    width:          175px;
+    height:         40px;
+    font-style:     normal;
+    font-weight:    500;
+    line-height:    16px;
+    font-family:    'Avenir-Regular';
+    position:       relative;
+       
+        .branch{
+            width:          0px;
+            height:         40px;
+            left:           145.63px;
+            top:            20px;
+            font-family:    'Avenir Next';
+            font-style:     normal;
+            font-weight:    500;
+            font-size:      13px;
+            line-height:    16px;
+            display:        flex;
+            align-items:    center;
+            color:          var(--black);
+
+            span{
+                margin-right:       15px;
+                color:              black;
+            }
+                    
+            img{
+                width:          18px;
+                height:         18px;
+            }
+        }
+
+}

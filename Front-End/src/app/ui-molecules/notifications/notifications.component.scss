@@ -1,0 +1,26 @@
+.notifications{
+    min-width:      175px;
+    height:         44px;
+    font-style:     normal;
+    font-weight:    500;
+    line-height:    16px;
+    font-family:    'Avenir-Regular';
+    position:       relative;  
+    display:        inline-flex;
+
+    .button-s, button{
+        border:         2px solid var(--light-blue);
+    }
+
+    app-button-s{
+        margin-left:   10px;
+    }
+}
+
+::ng-deep{
+  
+    span{
+       color:       var(--blue);
+    }
+}
+

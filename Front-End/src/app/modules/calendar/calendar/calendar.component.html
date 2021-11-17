@@ -1,0 +1,37 @@
+
+<div class="calendar-container">
+    <div class="calendar">
+        <div class="time-col">
+            <div class="time">
+                <div class="time-row no-border" *ngFor="let time of timeTables">
+                    {{time}}
+                </div>
+            </div>
+        </div>
+        <div class="calendar-col" *ngFor="let data of calendarData">
+            <div class="user">
+                <div class="user-profile-picture">
+                    <img src="{{data.staff.picture}}">
+                </div>
+                <span class="user-name">
+                    {{data.staff.name}}
+                </span>
+            </div>
+            <div class="agenda">
+                <ng-container *ngFor="let time of timeTables">
+                    <div class="agenda-row">
+                        <ng-container *ngFor="let appointment of data.appointments">
+                            <div class="appointment"  *ngIf="appointment?.startTime === getSlicedTime(time)">
+                                <app-appointment
+                                    [appointment]="appointment"
+                                    [height]="calculateHeight(appointment)"
+                                    [doubleAppointment]="false">
+                                </app-appointment>
+                            </div>
+                        </ng-container>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

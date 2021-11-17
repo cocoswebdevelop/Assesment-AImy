@@ -1,0 +1,22 @@
+<div class="nav-bar">
+    <div class="nav-bar-content">
+        <img class="logo" src="./assets/images/global/logo-aimy.png">
+        <app-branch-toggler
+            class="branch-toggler">
+        </app-branch-toggler>
+        <app-input-m 
+            class="search"
+            [placeholder]="'Zoeken...'">
+        </app-input-m>
+        <app-day-toggler
+            class="day-toggler">
+        </app-day-toggler>
+        <app-calendar-filters
+            class="calendar-filters">
+        </app-calendar-filters>
+        <app-notifications
+            (openChatBar)="openChats()"
+            class="notifications">
+        </app-notifications>
+    </div>
+</div>

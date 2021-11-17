@@ -1,0 +1,41 @@
+<div
+    [ngClass]="{'double' : doubleAppointment == true, 'single': doubleAppointment == false || undefined }"
+        id="{{ 'appointment' + appointment.id}}">
+    <div class="details">
+        <div class="time-period">
+            {{appointment.start}} - {{appointment.end}}
+        </div>
+        <div class="title">
+            {{appointment.title}}
+        </div>
+        <div class="catagory">
+            {{appointment.catagory}}
+        </div>
+        <div class="description">
+            {{appointment.description}}
+        </div>
+    </div>
+    <div class="actions">
+        <div class="actions-icon">
+            <img src="./assets/images/icons/appointment/ribbon.svg">
+        </div>
+        <div class="actions-icon">
+            <img src="./assets/images/icons/appointment/note.svg">
+        </div>
+        <div class="actions-icon">
+            <img src="./assets/images/icons/appointment/favourite.svg">
+        </div>
+        <div class="actions-icon">
+            <img src="./assets/images/icons/appointment/check.svg">
+        </div>
+        <div class="actions-icon">
+            <img src="./assets/images/icons/appointment/birthday.svg">
+        </div>
+        <div class="actions-icon">
+            <img src="./assets/images/icons/appointment/lock.svg">
+        </div>
+        <div class="actions-icon">
+            <img src="./assets/images/icons/appointment/shampoo.svg">
+        </div>
+    </div>
+</div>
