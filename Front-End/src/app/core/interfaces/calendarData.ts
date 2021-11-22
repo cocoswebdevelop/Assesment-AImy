@@ -2,6 +2,6 @@ import { appointments } from "./appointments";
 import { staff } from "./staff";
 
 export interface calendarData  {
-    staff : Array<staff>,
+    staff : staff,
     appointments : Array<appointments>
 }
