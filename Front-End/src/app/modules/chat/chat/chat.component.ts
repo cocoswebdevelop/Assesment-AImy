@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-chat',
@@ -9,7 +9,12 @@ export class ChatComponent implements OnInit {
 
   constructor() { }
 
+  @Output() closeBar : EventEmitter<boolean> = new EventEmitter();
+
   ngOnInit(): void {
   }
 
+  closeChatBar(){
+    this.closeBar.emit(false);
+  }
 }

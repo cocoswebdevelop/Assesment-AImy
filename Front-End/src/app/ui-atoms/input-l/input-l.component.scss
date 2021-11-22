@@ -1,0 +1,18 @@
+input{
+    width:          325px;
+    height:         40px;
+    font-size:      13px;
+    line-height:    18px;
+    text-align:     left;
+    text-indent:    5%;
+    background-image: url(../../../assets/images/icons/navbar/search.png);
+    background-position: right;
+    background-position-x: 285px;
+    background-repeat: no-repeat;
+}
+
+
+::placeholder{  
+    font-size:              13px;
+    line-height:            18px;
+}

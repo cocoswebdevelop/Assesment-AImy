@@ -5,6 +5,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UiAtomsModule } from '../ui-atoms/ui-atoms.module';
 import { CalendarComponent } from './calendar/calendar.component';
 import { UiMoleculesModule } from '../ui-molecules/ui-molecules.module';
+import { ChatModule } from '../modules/chat/chat.module';
 
 
 
@@ -17,7 +18,8 @@ import { UiMoleculesModule } from '../ui-molecules/ui-molecules.module';
   imports: [
     CommonModule,
     UiMoleculesModule,
-    UiAtomsModule
+    UiAtomsModule,
+    ChatModule
   ],
   exports : [ 
     NavbarComponent,

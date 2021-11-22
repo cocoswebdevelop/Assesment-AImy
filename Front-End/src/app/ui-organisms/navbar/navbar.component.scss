@@ -52,3 +52,12 @@
     }
 }
 
+app-chat{
+    height:             calc(100% - 64px);
+    width:              30vw;
+    background-color:   var(--white);
+    position:           fixed;
+    top:                64px;
+    right:              0;
+    z-index:            999;
+}

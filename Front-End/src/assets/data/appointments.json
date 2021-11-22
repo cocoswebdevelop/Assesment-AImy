@@ -1,7 +1,7 @@
 [
     {
         "id":  1,
-        "title" : "Patrick",
+        "title" : "Simon",
         "barber" : 1,
         "catagory": "Mannen knippen",
         "colourTag" : "red",

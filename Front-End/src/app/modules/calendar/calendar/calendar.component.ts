@@ -16,13 +16,11 @@ export class CalendarComponent implements OnInit {
   staff : staff
   appointments : Array<appointments>;
   timeTables : Array<any>;
-  
   constructor(private _calendar : CalendarService) { }
 
   ngOnInit(): void {
     this.getGlobalCalendarData();
   } 
-
 
   // Load all calendar data from the calendar service. 
 
@@ -72,7 +70,6 @@ export class CalendarComponent implements OnInit {
     y = y * 4;
 
     for(let x = 0; x < times.length; x ++){
-      
       let end = times[x].split(':');
         switch (end[1]) {
           case '15':

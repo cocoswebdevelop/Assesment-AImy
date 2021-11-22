@@ -15,8 +15,13 @@
             class="calendar-filters">
         </app-calendar-filters>
         <app-notifications
-            (openChatBar)="openChats()"
+            (openChatBar)="openChats($event)"
             class="notifications">
         </app-notifications>
     </div>
 </div>
+<!-- *ngIf="showChatBar == true" -->
+<ng-container *ngIf="showChatBar === true">
+    <app-chat
+    (closeBar)="closeChats($event)"> </app-chat>
+</ng-container>

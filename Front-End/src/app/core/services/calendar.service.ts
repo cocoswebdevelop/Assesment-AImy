@@ -7,8 +7,13 @@ import { staff } from '../interfaces/staff';
   providedIn: 'root'
 })
 export class CalendarService {
+  showChatBar : boolean;
 
   constructor(private _http : HttpClient) { }
+
+  get getShowChatBar() :boolean{
+    return this.showChatBar;
+  }
 
   async getStaff(){
     const data = await this._http.get<Array<staff>>('./assets/data/staff.json').toPromise();
