@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="chats">
-        <div *ngFor="let chat of chats" class="chat">
+        <div *ngFor="let chat of chats" class="chat" (click)="openChat(chat.id)">
             <div class="chat-profile"><img src="{{chat.profile}}"></div>
             <div class="chat-details">
                 <div class="chat-name">{{chat.title}}</div>

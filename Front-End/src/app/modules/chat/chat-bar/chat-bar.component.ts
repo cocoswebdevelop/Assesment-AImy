@@ -33,5 +33,9 @@ export class ChatBarComponent implements OnInit {
   closeChatBar(){
     this.closeBar.emit(false);
   }
+
+  openChat(chatId){
+    
+  }
 }
 

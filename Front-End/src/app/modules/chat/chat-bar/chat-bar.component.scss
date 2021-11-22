@@ -64,9 +64,15 @@
             align-items:            center;
             display:                inline-flex;
             background-color:       transparent;
+            cursor:                 pointer;
 
             & > *{
                 margin:         5px;
+            }
+
+            &:hover > * {
+                color:          var(--blue);
+                transition:     0.2s;
             }
 
             .chat-profile{
