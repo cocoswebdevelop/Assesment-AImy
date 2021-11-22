@@ -7,6 +7,8 @@ import { ButtonSComponent } from './button-s/button-s.component';
 import { InputMComponent } from './input-m/input-m.component';
 import { InputSComponent } from './input-s/input-s.component';
 import { InputLComponent } from './input-l/input-l.component';
+import { ButtonDropdownLComponent } from './button-dropdown-l/button-dropdown-l.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,10 +20,12 @@ import { InputLComponent } from './input-l/input-l.component';
     ButtonSComponent,
     InputMComponent,
     InputSComponent,
-    InputLComponent
+    InputLComponent,
+    ButtonDropdownLComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports: [
     ButtonComponent,
@@ -30,7 +34,8 @@ import { InputLComponent } from './input-l/input-l.component';
     ButtonSComponent,
     InputMComponent,
     InputSComponent,
-    InputLComponent
+    InputLComponent,
+    ButtonDropdownLComponent
   ]
 })
 export class UiAtomsModule { }

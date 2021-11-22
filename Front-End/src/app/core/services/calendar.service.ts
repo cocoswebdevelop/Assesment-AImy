@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { appointments } from '../interfaces/appointments';
 import { calendarData } from '../interfaces/calendarData';
 import { staff } from '../interfaces/staff';
@@ -8,12 +9,15 @@ import { staff } from '../interfaces/staff';
 })
 export class CalendarService {
   showChatBar : boolean;
-
+  filter = new Subject();
+  inputFilter = new Subject();
+  
   constructor(private _http : HttpClient) { }
 
   get getShowChatBar() :boolean{
     return this.showChatBar;
   }
+
 
   async getStaff(){
     const data = await this._http.get<Array<staff>>('./assets/data/staff.json').toPromise();
@@ -22,7 +26,7 @@ export class CalendarService {
 
   async getGlobalCalendarData(){
     const appointments = await this._http.get<Array<appointments>>('./assets/data/appointments.json').toPromise();
-    const staff = await this._http.get<Array<staff>>('./assets/data/staff.json').toPromise();
+    const staff = await this._http.get<staff>('./assets/data/staff.json').toPromise();
     const calendarData = this.renderGlobalCalendarData(appointments, staff);
     return calendarData;
   }
@@ -50,4 +54,24 @@ export class CalendarService {
     }
     return data;
   }
+
+
+  /* Filter data sharing from navbar to calendar */
+
+  setFilter(filter){
+    this.filter.next(filter);
+  }
+
+  setInputFilter(filter){
+    this.inputFilter.next(filter);
+  }
+
+  getFilter(): Subject<Object>{
+    return this.filter;
+  }
+
+  getInputFilter(): Subject<Object>{
+    return this.inputFilter;
+  }
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalendarService } from 'src/app/core/services/calendar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,19 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   showChatBar : boolean;
-  constructor() { }
+
+  constructor(private _calendar : CalendarService) { }
 
 
   ngOnInit(): void {
   }
 
   openChats(e){
-    console.log(e);
     this.showChatBar = e;
   }
 
   closeChats(e){
     this.showChatBar = e;
+  }
+
+  filterByStaff(e){
+    this._calendar.setFilter(e)
+  }
+
+  filterByInput(e){
+    this._calendar.setInputFilter(e);
   }
 
 }

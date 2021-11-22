@@ -1,0 +1,21 @@
+<div (mouseenter)="showDropDown = true" (mouseleave)="showDropDown = false" >
+    <button class="button-dropdown-l border"  > 
+        <span>{{buttonValue}} </span>
+    </button>
+    <img *ngIf="imageSrc" src="{{imageSrc}}">
+    <div *ngIf="showDropDown == true" class="filter-options" > 
+        <div class="filter-option" (click)="resetFilter()">
+            <div class="filter-text">
+                Geen filter
+            </div>
+        </div>
+        <div *ngFor="let staff of dropDownData" class="filter-option" (click)="selectStaffMember(staff)">
+            <img src="{{staff.picture}}">
+            <div class="filter-text">
+                {{staff.name}}
+            </div>
+        </div>
+     
+    </div>
+</div>
+

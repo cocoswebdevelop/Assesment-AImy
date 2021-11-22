@@ -6,13 +6,15 @@
         </app-branch-toggler>
         <app-input-m 
             class="search"
+            (inputFilter)="filterByInput($event)"
             [placeholder]="'Zoeken...'">
         </app-input-m>
         <app-day-toggler
             class="day-toggler">
         </app-day-toggler>
         <app-calendar-filters
-            class="calendar-filters">
+            class="calendar-filters"
+            (filterByStaff)="filterByStaff($event)">
         </app-calendar-filters>
         <app-notifications
             (openChatBar)="openChats($event)"

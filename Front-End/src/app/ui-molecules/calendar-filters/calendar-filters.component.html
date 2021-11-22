@@ -1,6 +1,9 @@
 <div class="filter-toggler border">
-   <app-button-l
-        [buttonValue]="'Alle Medewerkers'"
-        [imageSrc]="'./assets/images/icons/global/arrow-down.png'">
-   </app-button-l>
+   <app-button-dropdown-l
+      (newFilter)="setNewCalendarFilter($event)"
+      (click)="showStaff()"
+      [buttonValue]="'Alle Medewerkers'"
+      [dropDownData]="staffData"
+      [imageSrc]="'./assets/images/icons/global/arrow-down.png'">
+   </app-button-dropdown-l>
 </div>

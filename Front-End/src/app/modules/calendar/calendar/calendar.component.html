@@ -11,10 +11,10 @@
         <div class="calendar-col" *ngFor="let data of calendarData">
             <div class="user">
                 <div class="user-profile-picture">
-                    <img src="{{data.staff.picture}}">
+                    <img src="{{data.staff?.picture}}">
                 </div>
                 <span class="user-name">
-                    {{data.staff.name}}
+                    {{data.staff?.name}}
                 </span>
             </div>
             <div class="agenda">

@@ -13,7 +13,6 @@ import { calendarData } from 'src/app/core/interfaces/calendarData';
 export class CalendarComponent implements OnInit {
   staffArray : Array<staff>;
   calendarData : Array<calendarData>;
-  staff : staff
   appointments : Array<appointments>;
   timeTables : Array<any>;
   
@@ -21,6 +20,13 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getGlobalCalendarData();
+    this._calendar.getFilter().subscribe(x =>{
+      this.setFilteredCalendarData(x);
+    })
+
+    this._calendar.getInputFilter().subscribe(y => {
+      this.setFilteredCalendarDataInput(y);
+    })
   } 
 
   // Load all calendar data from the calendar service. 
@@ -28,13 +34,91 @@ export class CalendarComponent implements OnInit {
   async getGlobalCalendarData():Promise<void>{
     let calendarData = await this._calendar.getGlobalCalendarData();
     this.timeTables =  await this._calendar.getTimeTables();
-    for (let index = 0; index < calendarData.length; index++) {
-      calendarData[index].appointments.map(x =>{
+    for (let i = 0; i < calendarData.length; i++) {
+      calendarData[i].appointments.map(x =>{
         x.startTime = this.getSlicedTime(x.start);
         x.endTime = this.getSlicedTime(x.end);
       })  
     }
     this.calendarData = calendarData;
+  }
+
+  // Load calendar data with a filter by ID 
+
+  async setFilteredCalendarData(filter): Promise<void> { 
+    let filteredArray : Array<calendarData> = [] ;
+    let calendarData = await this._calendar.getGlobalCalendarData();
+    if(filter !== null){
+      calendarData.forEach(x => {
+        if(x.staff.id == filter){
+          filteredArray.push(x);
+          for(let y = 0; y < filteredArray[0].appointments.length; y++)
+          filteredArray[0].appointments.map(y =>{
+            y.startTime = this.getSlicedTime(y.start);
+            y.endTime = this.getSlicedTime(y.end);
+          })  
+        }
+      })
+      this.calendarData = filteredArray;
+    }
+    else this.getGlobalCalendarData();
+   
+  }
+  
+  // Load calendar data with a filter by STRING
+
+  async setFilteredCalendarDataInput(filter): Promise<void> { 
+    let filteredArray : Array<calendarData> = [] ;
+    let calendarData = await this._calendar.getGlobalCalendarData();
+    if(filter.name.length > 0){
+      filter = filter.name.toLowerCase();
+      const staff = this.filterStaff(calendarData, filter);
+      const appointments = this.filterAppointments(calendarData, filter);
+ 
+      staff.forEach(x => {
+        filteredArray.push(x)
+      });
+      appointments.forEach(y => {
+        filteredArray.push(y)
+      });
+
+      if (filteredArray.length == 0) this.getGlobalCalendarData();
+      else this.calendarData = filteredArray;
+    }
+    else this.getGlobalCalendarData();
+   
+  }
+
+
+  filterStaff(calendarData, filter): Array<calendarData>{
+    let filteredArray : Array<calendarData> = [] ;
+    calendarData.forEach(x => {
+      if(x.staff.name.toLowerCase().includes(filter)){
+        filteredArray.push(x);
+        for(let y = 0; y < filteredArray[0].appointments.length; y++)
+        filteredArray[0].appointments.map(y =>{
+          y.startTime = this.getSlicedTime(y.start);
+          y.endTime = this.getSlicedTime(y.end);
+        })  
+      }
+    })
+    return filteredArray;
+  }
+
+  filterAppointments(calendarData, filter): Array<calendarData>{
+    let filteredArray : Array<calendarData> = [] ;
+    for(let x = 0; x < calendarData.length; x++){
+      calendarData[x].appointments.forEach(y => {
+        if(y.title.toLowerCase().includes(filter)){
+          calendarData[x].appointments.map(y =>{
+            y.startTime = this.getSlicedTime(y.start);
+            y.endTime = this.getSlicedTime(y.end);
+          })  
+          filteredArray.push(calendarData[x]);
+        }
+      })
+    }
+    return filteredArray;
   }
 
   // getSlicedTime() returns a compareable numer to verificate wether an appointment should 
@@ -47,7 +131,8 @@ export class CalendarComponent implements OnInit {
   }
 
   // Nomally i would go for a library such as moment.js to determine (passed) time.
-  // However, I have chosen the hard way.
+  // However, I have chosen the hard way. 
+  // Calculates the height for each appointment
 
   calculateHeight(appointment):number{
     let fullHours : any = (appointment.endTime - appointment.startTime) / 100;

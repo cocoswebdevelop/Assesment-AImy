@@ -1,5 +1,8 @@
 
-<input type="text" 
-    class="border"
-    placeholder='{{placeholder}}' 
-    required>
+<form [formGroup]="filterForm">
+    <input type="text" 
+        class="border"
+        placeholder='{{placeholder}}' 
+        [formControl]="filterForm.controls['name']" 
+        required>
+</form>
