@@ -8,6 +8,7 @@ import { UiMoleculesModule } from './ui-molecules/ui-molecules.module';
 import { UiOrganismsModule } from './ui-organisms/ui-organisms.module';
 import { routes } from './routes';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatModule } from './modules/chat/chat.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     UiMoleculesModule,
     UiOrganismsModule,
     CalendarModule,
-    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })
+    ChatModule,
+    RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy' })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,21 @@
 :root{
+    /* primary colours */
     --white : 	        #FFFFFF;
-    --white-secondary:  #F2F2F2;
+    --red :             #EB5757;
     --gray:             #C7C4C9;
+    --purple:           #23036A;
+    --blue:             #66B8DF;
+    --black:            #000000;
+
+    /* secondary colours */
+
+    --white-secondary:  #F2F2F2;
     --dark-gray:        #9C9B9D;
     --light-gray:       #828282;
-    --purple:           #23036A;
-
-    --dark:             #333333;
-    --black:            #000000;
-    --blue:             #66B8DF;
     --light-blue:       #DFEDF6;
+    --dark:             #333333;
+
+    /* appointments colour scheme */
 
     --appointment-red:      #FFE5E8;
     --appointment-orange:   #FFEEE5;

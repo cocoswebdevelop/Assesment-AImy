@@ -1,0 +1,117 @@
+.chat-container{
+    width:              100%;
+    height:             100%;
+    background-color:   inherit;
+    
+    .chat-actions{
+        width:          90%;
+        height:         auto;
+        margin-left:    5%;
+        display:        inline-block;
+        align-items:    center;
+
+        .chat-header{
+            display:        inline-flex;
+            align-items:    center;
+            height:         65px;
+            width:          100%;
+
+            & > *{
+                margin:         10px;
+            }
+            
+
+            #chat-title{
+                color:          var(--black);
+                font-weight:    600!important;
+                font-size:      18px;
+            }
+
+            #chat-link{
+                font-weight:    600!important;
+                font-size:      13px;
+                cursor:         pointer;
+            }
+
+            #chat-close{
+                right:          6.5%;
+                position:       absolute;
+            }
+        }
+
+        .chat-search{
+            display:        inline-flex;
+            margin:         auto;
+            text-align:     center;
+
+            & > *{
+                margin:         5px;
+            }
+        }       
+    }
+
+    .chats{
+        width:          90%;
+        height:         auto;
+        margin-top:     10px;
+        margin-left:    5%;
+        display:        block;
+
+        .chat{
+            width:                  100%;
+            height:                 100px;
+            margin:                 auto;
+            align-items:            center;
+            display:                inline-flex;
+            background-color:       transparent;
+
+            & > *{
+                margin:         5px;
+            }
+
+            .chat-profile{
+                width:          60px;
+                height:         60px;
+    
+                img{
+                    width:          60px;
+                    height:         60px;
+                    margin:         auto;
+                }
+            }
+            .chat-details{
+                display:            inline-block;
+                width:              50%;
+                align-items:        center;
+
+                .chat-name{
+                    width:          100%;
+                    text-align:     center;
+                    font-size:      18px;
+                }
+                .chat-message{
+                    width:          100%;
+                    text-align:     center;
+                    color:          var(--light-gray);
+                    font-size:      13px;
+                }
+            }
+            .chat-timing{
+                width:              30%;
+                align-items:        center;
+                text-align:         right;
+                font-size:          14px;
+                font-weight:        600!important;
+                    
+                    .chat-time{
+                        font-size:      inherit;
+                    }
+
+                    .chat-time-left{
+                        font-size:      13px;
+                        color:          var(--red);
+                    }
+            }
+        }
+    }
+}

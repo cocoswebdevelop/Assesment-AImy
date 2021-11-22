@@ -6,6 +6,7 @@ import { UiAtomsModule } from '../ui-atoms/ui-atoms.module';
 import { CalendarComponent } from './calendar/calendar.component';
 import { UiMoleculesModule } from '../ui-molecules/ui-molecules.module';
 import { ChatModule } from '../modules/chat/chat.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import { ChatModule } from '../modules/chat/chat.module';
     CommonModule,
     UiMoleculesModule,
     UiAtomsModule,
-    ChatModule
+    ChatModule,
+    RouterModule
   ],
   exports : [ 
     NavbarComponent,

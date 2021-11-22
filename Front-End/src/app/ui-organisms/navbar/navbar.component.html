@@ -1,6 +1,6 @@
 <div class="nav-bar">
     <div class="nav-bar-content">
-        <img class="logo" src="./assets/images/global/logo-aimy.png">
+        <img class="logo" [routerLink]="['/calendar']" src="./assets/images/global/logo-aimy.png">
         <app-branch-toggler
             class="branch-toggler">
         </app-branch-toggler>
@@ -22,6 +22,7 @@
 </div>
 <!-- *ngIf="showChatBar == true" -->
 <ng-container *ngIf="showChatBar === true">
-    <app-chat
-    (closeBar)="closeChats($event)"> </app-chat>
+    <app-chat-bar
+        (closeBar)="closeChats($event)">
+    </app-chat-bar>
 </ng-container>

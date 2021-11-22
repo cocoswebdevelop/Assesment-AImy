@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   }
 
   openChats(e){
+    console.log(e);
     this.showChatBar = e;
   }
 

@@ -16,6 +16,7 @@ export class CalendarComponent implements OnInit {
   staff : staff
   appointments : Array<appointments>;
   timeTables : Array<any>;
+  
   constructor(private _calendar : CalendarService) { }
 
   ngOnInit(): void {

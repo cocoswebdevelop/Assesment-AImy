@@ -1,0 +1,35 @@
+<div class="chat-container">
+    <div class="chat-actions">
+        <div class="chat-header">
+            <div id="chat-title">Berichten</div>
+            <span id="chat-link" (click)="navigateToChats()"><a >Openen in berichten</a></span>
+            <img (click)="closeChatBar()" id="chat-close" src="./assets/images/icons/global/close.svg">
+        </div>
+        <div class="chat-search">
+            <app-input-l
+                [placeholder]="'Zoek in chats'"></app-input-l>
+            <app-button-s 
+                class="border"
+                [imageSrc]="'./assets/images/icons/chat/contact.svg'">
+            </app-button-s>
+        </div>
+    </div>
+    <div class="chats">
+        <div *ngFor="let chat of chats" class="chat">
+            <div class="chat-profile"><img src="{{chat.profile}}"></div>
+            <div class="chat-details">
+                <div class="chat-name">{{chat.title}}</div>
+                <div class="chat-message">{{chat.body}}</div>
+            </div>
+            <div class="chat-timing">
+                <div class="chat-time">
+                    {{chat.time}}
+                </div>
+                <!-- not sure what this is based on -->
+                <div class="chat-time-left">
+                    1u resterend
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

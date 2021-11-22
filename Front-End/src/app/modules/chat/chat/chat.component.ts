@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { chats } from 'src/app/core/interfaces/chats';
+import { ChatService } from 'src/app/core/services/chat.service';
 
 @Component({
   selector: 'app-chat',
@@ -7,14 +9,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
-
-  @Output() closeBar : EventEmitter<boolean> = new EventEmitter();
+  constructor(private _chats : ChatService) { }
 
   ngOnInit(): void {
   }
 
-  closeChatBar(){
-    this.closeBar.emit(false);
-  }
+
 }
