@@ -22,9 +22,9 @@
         </app-notifications>
     </div>
 </div>
-<!-- *ngIf="showChatBar == true" -->
+
 <ng-container *ngIf="showChatBar === true">
     <app-chat-bar
         (closeBar)="closeChats($event)">
     </app-chat-bar>
-</ng-container>
+</ng-container> 
