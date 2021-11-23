@@ -4,5 +4,6 @@ export interface chats  {
     title : string,
     body : string,
     time : string,
+    date : string,
     channel? : string
 }

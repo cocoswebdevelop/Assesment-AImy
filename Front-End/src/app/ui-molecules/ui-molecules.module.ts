@@ -7,6 +7,7 @@ import { CalendarFiltersComponent } from './calendar-filters/calendar-filters.co
 import { NotificationsComponent } from './notifications/notifications.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { InboxChatsComponent } from './inbox-chats/inbox-chats.component';
+import { InboxConversationComponent } from './inbox-conversation/inbox-conversation.component';
 
 
 
@@ -18,7 +19,9 @@ import { InboxChatsComponent } from './inbox-chats/inbox-chats.component';
     CalendarFiltersComponent,
     NotificationsComponent,
     AppointmentComponent,
-    InboxChatsComponent],
+    InboxChatsComponent,
+    InboxConversationComponent
+  ],
   imports: [
     CommonModule,
     UiAtomsModule
@@ -29,7 +32,8 @@ import { InboxChatsComponent } from './inbox-chats/inbox-chats.component';
     CalendarFiltersComponent,
     NotificationsComponent,
     AppointmentComponent,
-    InboxChatsComponent
+    InboxChatsComponent,
+    InboxConversationComponent
   ]
 })
 export class UiMoleculesModule { }

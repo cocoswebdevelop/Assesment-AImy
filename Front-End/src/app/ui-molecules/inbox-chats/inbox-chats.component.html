@@ -1,1 +1,22 @@
-<p>inbox-chats works!</p>
+<div class="inbox-chats-container view-padding">
+    <div class="chat-actions">
+        <div class="chat-header">
+            <div id="chat-title">Inbox</div>
+        </div>
+        <div class="chat-search">
+            <app-input-l
+                [placeholder]="'Zoek in chats'"></app-input-l>
+            <app-button-s 
+                class="border"
+                [imageSrc]="'./assets/images/icons/chat/togglers.svg'">
+            </app-button-s>
+        </div>
+    </div>
+    <ng-container *ngFor="let chat of chats">
+        <app-inbox-chat
+            (currentSelectedChat)="selectNewChat($event)"
+            [chat]="chat">
+        </app-inbox-chat>
+    </ng-container>
+   
+</div>

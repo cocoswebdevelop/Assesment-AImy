@@ -1,0 +1,54 @@
+.inbox-chats-container{
+    width:              30%;
+    height:             99%;
+    background-color:   var(--lightest-blue);
+
+    .chat-actions{
+        width:          90%;
+        height:         auto;
+        margin-left:    5%;
+        display:        inline-block;
+        align-items:    center;
+
+        .chat-header{
+            display:        inline-flex;
+            align-items:    center;
+            height:         65px;
+            width:          100%;
+            font-weight:    700!important;
+
+            & > *{
+                margin:         10px;
+            }
+            
+            #chat-title{
+                color:          var(--black);
+                font-weight:    600!important;
+                font-size:      18px;
+            }
+
+            #chat-link{
+                font-weight:    600!important;
+                font-size:      13px;
+                cursor:         pointer;
+            }
+
+            #chat-close{
+                right:          6.5%;
+                position:       absolute;
+            }
+        }
+
+        .chat-search{
+            display:        inline-flex;
+            margin:         auto;
+            text-align:     center;
+
+            & > *{
+                margin:         5px;
+            }
+        }       
+    }
+
+  
+}

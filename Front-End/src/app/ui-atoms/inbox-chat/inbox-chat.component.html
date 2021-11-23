@@ -1,1 +1,17 @@
-<h1> INBOX </h1>
+<div class="chat"  
+    (click)="selectChat(chat?.id)">
+    <div class="chat-profile"><img src="{{chat?.profile}}"></div>
+    <div class="chat-details">
+        <div class="chat-name">{{chat?.title}}</div>
+        <div class="chat-message">Jun 29, 2021<!--{{chat?.date}}--></div>
+    </div>
+    <div class="chat-timing">
+        <div class="chat-time">
+    
+        </div>
+      
+        <div class="chat-time-left">
+   
+        </div>
+    </div>
+</div>
