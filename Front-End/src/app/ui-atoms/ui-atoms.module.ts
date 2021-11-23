@@ -9,6 +9,8 @@ import { InputSComponent } from './input-s/input-s.component';
 import { InputLComponent } from './input-l/input-l.component';
 import { ButtonDropdownLComponent } from './button-dropdown-l/button-dropdown-l.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BarChatComponent } from './bar-chat/bar-chat.component';
+import { InboxChatComponent } from './inbox-chat/inbox-chat.component';
 
 
 
@@ -21,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     InputMComponent,
     InputSComponent,
     InputLComponent,
-    ButtonDropdownLComponent
+    ButtonDropdownLComponent,
+    BarChatComponent,
+    InboxChatComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +39,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     InputMComponent,
     InputSComponent,
     InputLComponent,
-    ButtonDropdownLComponent
+    ButtonDropdownLComponent,
+    BarChatComponent,
+    InboxChatComponent
   ]
 })
 export class UiAtomsModule { }

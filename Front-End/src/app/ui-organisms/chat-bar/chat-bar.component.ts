@@ -26,7 +26,7 @@ export class ChatBarComponent implements OnInit {
   }
 
   navigateToChats(){
-    this.closeChatBar();
+    this.closeBar.emit(false);
     this._router.navigate(['/chats']);
   }
 

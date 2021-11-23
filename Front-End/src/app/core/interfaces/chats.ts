@@ -3,5 +3,6 @@ export interface chats  {
     profile : string,
     title : string,
     body : string,
-    time : string
+    time : string,
+    channel? : string
 }

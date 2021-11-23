@@ -1,0 +1,16 @@
+<div class="chat" (click)="openChat(chat?.id)">
+    <div class="chat-profile"><img src="{{chat?.profile}}"></div>
+    <div class="chat-details">
+        <div class="chat-name">{{chat?.title}}</div>
+        <div class="chat-message">{{chat?.body}}</div>
+    </div>
+    <div class="chat-timing">
+        <div class="chat-time">
+            {{chat?.time}}
+        </div>
+      
+        <div class="chat-time-left">
+            1u resterend
+        </div>
+    </div>
+</div>

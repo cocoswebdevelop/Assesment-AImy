@@ -3,29 +3,32 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UiAtomsModule } from '../ui-atoms/ui-atoms.module';
-import { CalendarComponent } from './calendar/calendar.component';
 import { UiMoleculesModule } from '../ui-molecules/ui-molecules.module';
 import { ChatModule } from '../modules/chat/chat.module';
 import { RouterModule } from '@angular/router';
-
+import { InboxComponent } from './inbox/inbox.component';
+import { ChatBarComponent } from './chat-bar/chat-bar.component';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
     SidebarComponent,
-    CalendarComponent
+    InboxComponent,
+    ChatBarComponent
   ],
   imports: [
     CommonModule,
     UiMoleculesModule,
     UiAtomsModule,
-    ChatModule,
+    CommonModule,
     RouterModule
   ],
   exports : [ 
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    InboxComponent,
+    ChatBarComponent
   ]
 })
 export class UiOrganismsModule { }

@@ -27,11 +27,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+# Project Architecture
 
+This project is based on: https://atomicdesign.bradfrost.com/chapter-2/
 
 # Things I do not know how to do (yet) which I would love to learn:
 
 Shared appointments (calendar): 
     - display two appointments with overlapping time within the same column
-
+    - combine multiple filter options. Perhaps an array of filters?
 

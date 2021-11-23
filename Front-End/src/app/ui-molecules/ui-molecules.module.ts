@@ -6,12 +6,19 @@ import { BranchTogglerComponent } from './branch-toggler/branch-toggler.componen
 import { CalendarFiltersComponent } from './calendar-filters/calendar-filters.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { InboxChatsComponent } from './inbox-chats/inbox-chats.component';
 
 
 
 
 @NgModule({
-  declarations: [DayTogglerComponent, BranchTogglerComponent, CalendarFiltersComponent, NotificationsComponent, AppointmentComponent],
+  declarations: [
+    DayTogglerComponent, 
+    BranchTogglerComponent,
+    CalendarFiltersComponent,
+    NotificationsComponent,
+    AppointmentComponent,
+    InboxChatsComponent],
   imports: [
     CommonModule,
     UiAtomsModule
@@ -21,7 +28,8 @@ import { AppointmentComponent } from './appointment/appointment.component';
     BranchTogglerComponent,
     CalendarFiltersComponent,
     NotificationsComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    InboxChatsComponent
   ]
 })
 export class UiMoleculesModule { }
